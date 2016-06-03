@@ -24,29 +24,25 @@
             <label for="inputProvincia" class="col-lg-2 control-label">Provincia</label>
             <div class="col-lg-10">
                 <select ng-model="nuevaSolicitud.sol_codprov" class="form-control" id="inputProvincia">
-                    <option value="8">Esmeraldas</option>
-                    <option value="10">Manabí</option>
-                    <option value="12">Los Ríos</option>
+                    <option ng-repeat="provincia in provincias" value="{{provincia.codigo}}">{{provincia.nombre}}</option>
                 </select>
             </div>
         </div>
         <div class="form-group">
             <label for="inputCiudad" class="col-lg-2 control-label">Ciudad</label>
             <div class="col-lg-10">
-              <select ng-model="nuevaSolicitud.sol_codciu" class="form-control" id="inputCiudad">
-                  <option value="1">Ciudad 1</option>
-                  <option value="2">Ciudad 2</option>
-                  <option value="3">Ciudad 3</option>
-              </select>
+                <select ng-model="nuevaSolicitud.sol_codciu" class="form-control" id="inputCiudad">
+                    <option ng-repeat="ciudad in ciudades" value="{{ciudad.codigo}}">{{ciudad.nombre}}</option>
+                </select>
             </div>
         </div>
         <div class="form-group">
             <label for="inputSexo" class="col-lg-2 control-label">Sexo</label>
             <div class="col-lg-10">
-              <select ng-model="nuevaSolicitud.sol_sexo" class="form-control" id="inputProvincia">
-                  <option value="H">Hombre</option>
-                  <option value="M">Mujer</option>
-              </select>
+                <select ng-model="nuevaSolicitud.sol_sexo" class="form-control" id="inputSexo">
+                    <option value="H">Hombre</option>
+                    <option value="M">Mujer</option>
+                </select>
             </div>
         </div>
         <div class="form-group">
@@ -64,10 +60,10 @@
         <div class="form-group">
             <label for="inputDisc" class="col-lg-2 control-label">¿Algún miembro del hogar tiene discapacidad?</label>
             <div class="col-lg-10">
-              <select ng-model="nuevaSolicitud.sol_disc" class="form-control" id="inputDisc">
-                  <option>Si</option>
-                  <option>No</option>
-              </select>
+                <select ng-model="auxsolicitud.sol_disc" class="form-control" id="inputDisc">
+                    <option>Si</option>
+                    <option>No</option>
+                </select>
             </div>
         </div>
         <div class="form-group">

@@ -6,6 +6,8 @@
     <title>Damnificados Ecuador</title>
     <link rel="stylesheet" href="lib\css\bootstrap.min.css">
     <link rel="stylesheet" href="css\miestilo.css">
+    <link rel="stylesheet" href="lib\css\angular-toastr.css">
+    <link rel="stylesheet" href="https://npmcdn.com/angular-toastr/dist/angular-toastr.css" />
 </head>
 
 <body ng-app="mipanel">
@@ -27,11 +29,11 @@
                         <a href="#/solicitud">Registrar Solicitud </a>
                     </li>
                     <li>
-                        <a href="#/chat">Consultar </a>
+                        <a href="#/consulta">Consultar </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#/acercade">Acerca de </a>
-                    </li>
+                    </li> -->
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#/login">Ingresar </a></li>
@@ -48,11 +50,20 @@
     <script src="lib\js\angular.min.js"></script>
     <!-- dependencias -->
     <script src="lib\js\angular-ui-router.js"></script>
+    <script src="lib\js\angular-resource.js"></script>
+    <script src="lib\js\angular-cookies.js"></script>
+    <script src="lib\js\angular-toastr.js"></script>
+    <script src="https://npmcdn.com/angular-toastr/dist/angular-toastr.tpls.js"></script>
     <!-- app -->
     <script src="js\app.js"></script>
     <!-- controladores -->
     <script src="js\controladores\SolicitudController.js"></script>
+    <script src="js\controladores\ConsultaController.js"></script>
+    <script src="js\controladores\IngresoController.js"></script>
     <!-- factories -->
+    <script src="js\factories\SolicitudFactory.js"></script>
+    <script src="js\factories\UsuarioFactory.js"></script>
+
 </body>
 
 </html>
