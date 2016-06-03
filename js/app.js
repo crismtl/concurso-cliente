@@ -28,7 +28,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         .state('solicitud', {
             url: "/solicitud",
             templateUrl: "vistas/solicitud.html",
-            // controller: 'RegistroController',
+            controller: 'SolicitudCtrl',
             // data: {
             //     loginRequerido: false
             // }
